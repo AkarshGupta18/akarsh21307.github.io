@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    line-height: 1.5;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(244, 219, 203);
+    padding-left: 30rem;
+}
+section{
+ padding: .5rem 5%;
+ min-height: 80vh;
+}
+.heading{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color:rgb(149, 9, 9);
+    text-transform: uppercase;
+}
+.heading span{
+    color:black;
+    text-transform: uppercase;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background: rgb(149, 9, 9);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background:black;
+    letter-spacing: .2rem;
+}
+header{
+    position: fixed;
+    width: 30rem;
+    text-align: center;
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    display: flex;
+    background: rgb(149, 9, 9);
+    align-items:center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+}
+header .logo{
+     text-transform: uppercase;
+     color:rgb(21, 19, 19);
+     font-size: 3rem;
+     font-weight: bolder;
+}
+header .logo span{
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+header .navbar a{
+    display: block;
+    font-size: 2.5rem;
+    color:rgb(8, 27, 33);
+    margin:2rem 0;
+}
+header .navbar a:hover{
+letter-spacing: .2rem;
+color: antiquewhite;
+}
+header .follow a{
+    font-size:2.5rem ;
+    color: whitesmoke;
+    margin: 0.7rem;
+}
+header .follow a:hover{
+    color: rgb(16, 14, 17);
+}
+#menu-bars{
+    position: fixed;
+    top:1rem;
+    right:1rem;
+    z-index: 10000;
+    background: rgb(176, 176, 17);
+    color: blueviolet;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size:3rem;
+    cursor:pointer;
+    display: none;
+}
+
+/* media queries */
+@media(max-width:991px){
+
+html{
+    font-size: 55%;
+}
+body{
+    padding: 0;
+}
+#menu-bars{
+    display: initial;
+}
+header{
+    left:-120%
+}
+header.active{
+    left:0%;
+}
+
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    header{
+        width:100%
+    }
+    
+}
+
+  
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(213, 244, 8);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+  .home .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .home .image{
+    position: relative;
+    flex: 1 1 20rem;
+    box-shadow: 0 1rem 1rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.home .image img{
+  width: 100%;
+  height: auto;
+}
+  
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content .hi{
+    font-size: 2rem;
+    color: rgb(10, 9, 10);
+}
+.home .content h3{
+    font-size: 4.5rem;
+    color: rgb(149, 9, 9);;
+    text-transform: uppercase;
+}
+.home .content h3 span{
+  color: black;
+  text-transform: uppercase;
+}
+.home .content .info{
+    font-size: 2.5rem;
+    color: black;
+    padding: .5rem 0;
+}
+.home .content .text{
+    font-size: 1.7rem;
+    color:rgb(149, 9, 9);
+    padding: .5rem 0;
+}
+.about .row1{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-bottom:2rem;
+}
+.about .row1 .image{
+    flex:1 1 25rem;
+}
+.about .row1 .image img{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem black;
+}
+.about .row1 .content{
+    flex:1 1 50rem;
+}
+.about .row1 .content a{
+    flex:1 1 50rem;
+    color: whitesmoke;
+}
+.about .row1 .content h3{
+  color: rgb(149, 9, 9);
+  font-size:3.5rem;
+}
+.about .row1 .content p span{
+    color: rgb(149, 9, 9);
+}
+.about .row1 .content p{
+    color: rgb(6, 5, 5);
+    font-size:1.7rem;
+    padding:.5rem 0;
+}
+
+
+.about .row1 .content .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    pad: 0.5 .5rem 0;
+}
+
+.about .row1 .content .box-container .box{
+    flex:1 1 20rem;
+}
+.about .row1 .content .box-container .box span{
+    color:black;
+}
+.about .row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+.about .row2 .skills{
+    flex: 1 1 40rem;
+}
+.about .row2 .skills .progress{
+    padding:1rem 0;
+}
+.about .row2 .skills .progress h3{
+    display: flex;
+    justify-content: space-between;
+    pad: .7rem 0;
+    font-size: 1.7rem;
+    color:black;
+    font-weight: 400;
+}
+.about .row2 .box-container{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.about .row2 .skills .progress .bar{
+    width: 100%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    height: 1rem;
+    border-radius: 50rem;
+}
+.about .row2 .skills .progress .bar span{
+   display: block;
+   height: 100%;
+   background-color: rgb(149, 9, 9);
+}
+.about .row2 .skills .progress:nth-child(1) .bar span{
+    width: 95%;
+}
+.about .row2 .skills .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+.about .row2 .box-container .box{
+    flex: 1 1 15rem;
+    background: whitesmoke;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem black;
+}
+.about .row2 .box-container .box h3{
+    font-size: 3rem;
+    color: rgb(149, 9, 9);
+    padding-top: .5rem;
+    }
+.about .row2 .box-container .box p{
+font-size: 1.7rem;
+color: black;
+padding-top: .5rem;
+}
+.service .box-container{
+    display:flex; 
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.service .box-container .box{
+    flex:1 5 10rem;
+    text-align: center;
+    padding: 2rem;
+    background-color:whitesmoke;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem black;
+}
+
+.service .box-container .box i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 6rem;
+    font-size: 2rem;
+    color: whitesmoke;
+    background-color: rgb(149, 9, 9);
+    border-radius: 30%;
+}
+.service .box-container .box h3{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.experience .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.experience .box-container .box{
+    position: relative;
+    flex:1 1 30rem;
+    border-left: .2rem solid rgb(11, 11, 11);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    
+}
+.experience .box-container .box::before{
+    content:open-quote;
+    position: absolute;
+    top:0;
+    left:-1rem;
+     height: 2rem;
+     width: 2rem;
+     border-radius: 50%;
+     background-color:rgb(149, 9, 9);
+}
+.experience .box-container .box .content{
+
+background-color: whitesmoke;
+padding: 1.5rem;
+box-shadow:  0 .5rem .5rem black;
+border-radius: .5rem;
+text-align: center;
+}
+.experience .box-container .box #new{
+    
+    display: inline-block;
+    margin: auto;
+    
+}
+.experience .box-container .box .content span{
+    font-size: 2.5rem;
+    color:whitesmoke;
+    background: rgb(149, 9, 9);
+    border-radius: 50rem;
+    padding: 1rem 1rem;
+}
+.experience .box-container .box .content p{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+.portfolio .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.portfolio .box-container .box{
+   flex:1 1 30rem;
+   height: 25rem;
+   position: relative;
+   overflow: hidden;
+   border: 1rem solid whitesmoke;
+   box-shadow: 0 .5rem 1rem black;
+}
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    
+}
+.portfolio .box-container .box h3{
+    position: absolute;
+    bottom: .4rem;
+    left:1rem;
+    color: black;
+    text-transform: uppercase;
+}
+.portfolio .box-container .box .icons{
+    position: absolute;
+    bottom:.5rem;
+    right:1rem;
+}
+.portfolio .box-container .box .icons a{
+    display:block;
+    height: 3rem;
+    width: 3rem;
+    background-color:rgb(149, 9, 9);
+    color: whitesmoke;
+    border-radius: 1rem;
+    border-color: black;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+.portfolio .box-container .box .icons a:hover{
+    background-color: rgb(15, 15, 15);
+}
+.portfolio .box-container .box:hover img{
+    height:80%;
+    width: 80%;
+}
+.contact .icons-container{
+    display: flex;
+    gap:1.5rem;
+    padding-bottom: 2rem;
+}
+.contact .icons-container .icons{
+    text-align: center;
+    padding: 2.5rem;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    box-shadow: 0 .5rem .5rem black;
+    border-radius: 1rem;
+}
+.contact .icons-container .icons i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background-color: rgb(149, 9, 9);
+    color: whitesmoke;
+    border-radius: 50%;
+}
+.contact .icons-container .icons i:hover{
+    background: black;
+}
+.contact .icons-container .icons h3{
+    font-size: 1.5rem;
+    padding:.5rem 0;
+}
+.contact .icons-container .icons p{
+    font-size: 1.5rem;
+    color:  rgb(9, 9, 9);
+}
+.contact .info{
+
+    display: flex;
+    gap:1.5rem;
+
+}
+
+.contact .info form{
+    flex:10 10 55rem;
+    background: rgb(245, 245, 245);
+    border:.5rem solid rgb(149, 9, 9);
+    padding: 0 2rem;
+    box-shadow: 0 .5rem .5rem;
+    border-radius: 10;
+}
+.contact .info .map{
+    flex:1 1 30rem;
+    border: .5rem solid rgb(149, 9, 9);
+    width: 100%;
+    box-shadow: 0 .5rem .5rem;
+}
+
+.contact .info form .box,.contact .info form textarea{
+    width: 100%;
+    border-bottom: .2rem solid black;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+.contact .info .submit{
+    
+    padding-bottom: .5rem;
+    margin: auto;
+    text-align: center;
+}
+
+.footer{
+    margin-top: 2rem;
+    font-size:2rem;
+    padding:2.5rem;
+    text-align: center;
+    background-color: rgb(246, 244, 241);
+}
+.footer span{
+    color: rgb(149, 9, 9);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
